@@ -13,6 +13,7 @@ class FollowController extends Controller
     public function index()
     {
         //
+        
     }
 
     /**

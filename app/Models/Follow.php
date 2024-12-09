@@ -8,7 +8,11 @@ class Follow extends Model
 {
     //
     protected $fillable =[
-        'works_id',
+        'offer_id',
         'news'
     ];
+
+    public function offer(){
+        return $this->belongsTo(Offer::class);
+    }
 }

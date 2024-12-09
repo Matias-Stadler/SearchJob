@@ -12,6 +12,7 @@
                     <th scope="col">Direccion Web</th>
                     <th scope="col">Creado</th>
                     <th scope="col">Actualizado</th>
+                    <th scope="col">Novedades</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +32,15 @@
                         <td>{{ $offer->web}}</td>
                         <td>{{ $offer->created_at}}</td>
                         <td>{{ $offer->updated_at}}</td>
+                        <td>
+                            <ul>
+                                @forelse ($offer->follows as $follow)
+                                    <li>{{$follow->news}}</li>
+                                @empty
+                                    <li>no hay seguimiento</li>
+                                @endforelse
+                            </ul>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

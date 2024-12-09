@@ -19,4 +19,8 @@ class Offer extends Model
         'created_at',
         'updated_at',
     ];
+
+    public function follows(){
+        return $this->hasMany(Follow::class);
+    }
 }
