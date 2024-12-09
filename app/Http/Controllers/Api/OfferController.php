@@ -36,7 +36,7 @@ class OfferController extends Controller
             'company' => $request->company,
             'status' => $request->status,
             'jobPosition'=> $request->jobPosition,
-            'comment' => $request->comment,
+            'web' => $request->web,
         ]);
 
         $offer->save();

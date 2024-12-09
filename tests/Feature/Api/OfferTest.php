@@ -42,7 +42,7 @@ class OfferTest extends TestCase
             'status' => '1',
             'company' => 'arrabal',
             'jobPosition' => 'coder',
-            'comment' => 'entregar CV',
+            'web' => 'entregar CV',
         ]);
 
         $response = $this->get(route('apihome'));
@@ -58,7 +58,7 @@ class OfferTest extends TestCase
             'status' => 1,
             'company' => 'arrabal',
             'jobPosition' => 'coder',
-            'comment' => 'entregar CV',
+            'web' => 'entregar CV',
         ]);
 
         $data = ['company' => 'arrabal'];
@@ -71,7 +71,7 @@ class OfferTest extends TestCase
             'status' => 1,
             'company' => 'Factoria F5',
             'jobPosition' => 'coder',
-            'comment' => 'entregar CV',
+            'web' => 'entregar CV',
         ]);
 
         $data = ['company' => 'Factoria F5'];

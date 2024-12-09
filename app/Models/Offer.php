@@ -15,7 +15,7 @@ class Offer extends Model
         'status',
         'company',
         'jobPosition',
-        'comment',
+        'web',
         'created_at',
         'updated_at',
     ];

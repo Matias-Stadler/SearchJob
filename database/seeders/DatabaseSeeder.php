@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             'status' => '1',
             'company' => 'junes',
             'jobPosition' => 'cajero',
-            'comment' => 'segunda entrevista',
+            'web' => 'http://quewey.com',
         ]);
         //Offer::factory(5)->create();
     }

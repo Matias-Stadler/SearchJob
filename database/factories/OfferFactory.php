@@ -21,7 +21,7 @@ class OfferFactory extends Factory
             'status' => $this->faker->boolean(),
             'company' => $this->faker->company(),
             'jobPosition' => $this->faker->jobTitle(),
-            'comment'=> $this->faker->realText($maxNbChars = 25),
+            'web'=> $this->faker->url,
         ];
     }
 }
