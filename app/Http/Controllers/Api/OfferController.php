@@ -34,7 +34,9 @@ class OfferController extends Controller
         //
         $offer = Offer::create([
             'company' => $request->company,
-            'status' => $request->status
+            'status' => $request->status,
+            'jobPosition'=> $request->jobPosition,
+            'comment' => $request->comment,
         ]);
 
         $offer->save();
@@ -68,7 +70,9 @@ class OfferController extends Controller
 
         $offer->update([
             'company' => $request->company,
-            'status' => $request->status
+            'status' => $request->status,
+            'jobPosition' => $request->jobPosition,
+            'comment' => $request->comment,
         ]);
         $offer->save();
         return response()->json($offer, 200);
@@ -80,6 +84,7 @@ class OfferController extends Controller
     public function destroy(string $id)
     {
         //
-        Offer::find($id)->delete();
+        $offer = Offer::find($id);
+        $offer->delete();
     }
 }

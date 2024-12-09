@@ -19,7 +19,13 @@
 
                     <tr>
                         <td>{{ $offer->id}}</td>
-                        <td>{{ $offer->status}}</td>
+                        <td>
+                            @if($offer->status===1)
+                            in progress
+                            @else
+                            finished
+                            @endif
+                        </td>
                         <td>{{ $offer->company}}</td>
                         <td>{{ $offer->jobPosition}}</td>
                         <td>{{ $offer->comment}}</td>
