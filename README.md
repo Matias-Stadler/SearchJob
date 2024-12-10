@@ -1,67 +1,152 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# JOB SEARCH APP LARAVEL
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+>[!IMPORTANT]
+>To learn how to install and also to know how I did this project, it's very important that you read every part of this readme. Thank you for your patience and have a good read.
+***
 
-## About Laravel
+## :bulb: Project description
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+***
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requirements to achieve in this project:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- We must display on the screen all our applied offers with their status (Blade).
+  
+- There must be a status position that is "In Progress" or "Completed".
 
-## Learning Laravel
+- We must view all our offers applied by Endpoints.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- We must be able to delete, insert, modify and view all the entrys through Endpoints.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- We have to be able to watch the show on Endpoints.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- We have to be able to see the show (Blade).
 
-## Laravel Sponsors
+- Date management 1 creation, 2 last modification.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- 70% minimum test coverage.
+***
 
-### Premium Partners
+## :eye_speech_bubble: Project overview
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Take a look at how my project turned out.
 
-## Contributing
+***
+![imagen_2024-12-10_110414217](https://github.com/user-attachments/assets/0ea17740-c8ce-44f8-8993-084e31b605c3)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+***
 
-## Code of Conduct
+## Project Diagrams (BBDD)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+The diagram I did for my database in **DrawSQL**
+***
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Installation requirements
 
-## License
+Before you start to read how to install the project you'll need these requirements:
+>[!NOTE]
+>If you can't install xampp, look for any other local server that supports **MySQL** and **PHP**
+***
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# SearchJob
+1. XAMPP
+
+2. Install Composer
+
+3. Install NPM in Node.js
+
+4. Xdebug (for the tests coverage)
+
+5. Postman
+***
+
+## :scroll: Installation
+
+1. Clone this repository:
+```
+https://github.com/Matias-Stadler/SearchJob.git
+```
+
+2. Install **Composer** and **NPM**
+```
+composer install
+```
+```
+npm install
+```
+
+3. Create a .env file copying everything inside the existing file .env.example and modify the following lines:
+* DB_CONNECTION=mysql
+* DB_DATABASE=jobSearch
+
+4. Create a database in **MySQL**
+
+5. Now go to the VSC terminal and put the following command
+```
+php artisan migrate:fresh --seed
+```
+This command will generate all the tables.
+
+6. Open another terminal in **VSC** and put the following command
+```
+npm run dev
+```
+
+7. Open another terminal and run the server with this command
+```
+php artisan serve
+```
+You'll see an url that is going to take you to a website.
+
+>[!IMPORTANT]
+>Be sure that your running npm and the server in **DIFFERENT** terminals, **DON'T** close these two terminals and **DON'T** use other commands in these two terminals. 
+***
+
+## Project documentation
+
+<p align="center">My endpoints</p>
+
+```
+api/offers/{id}/follows  (post new follow)
+```
+```
+api/offers  (view all de offers)
+```
+```
+api/offers  (post new offer)
+```
+```
+api/offers/{id}  (edit a current offer)
+```
+```
+api/offers/{id}  (delete a current offer)
+```
+***
+
+## :white_check_mark: Tests
+
+> [!IMPORTANT]
+> It's important to test the project so we can check if it works correctly and to do that use this command in the **VSC** terminal:
+
+```php
+ $ php artisan test
+ ```
+(screenshot here)
+
+This is what you should see after doing the tests.
+***
+
+## Contact and information
+
+>[!NOTE]
+>Please understand that i'm still learning, not everything will look or be perfect. Thank you for the attention.
+
+If you want to contact me here's my gmail: koutarcj@gmail.com
+***
+
+## Thanks for reading!
+
+Thanks for reading this readme!
+
+Have a good day! :3
+***
