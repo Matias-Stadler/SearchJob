@@ -40,6 +40,8 @@ Take a look at how my project turned out.
 
 
 The diagram I did for my database in **DrawSQL**
+
+![Captura de pantalla 2024-12-10 111526](https://github.com/user-attachments/assets/a91079ed-7d1e-415d-b0d6-15b886fc61bd)
 ***
 
 ## Installation requirements
@@ -131,7 +133,7 @@ api/offers/{id}  (delete a current offer)
 ```php
  $ php artisan test
  ```
-(screenshot here)
+![imagen_2024-12-10_111653365](https://github.com/user-attachments/assets/d063ad8a-7272-4dd0-aa27-88e60f14b0d5)
 
 This is what you should see after doing the tests.
 ***
