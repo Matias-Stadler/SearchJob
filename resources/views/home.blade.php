@@ -31,7 +31,13 @@
                         <td>{{ $offer->jobPosition}}</td>
                         <td>{{ $offer->web}}</td>
                         <td>{{ $offer->created_at}}</td>
-                        <td>{{ $offer->updated_at}}</td>
+                        <td>
+                            @forelse ($offer->follows as $follow)
+                            {{$follow->updated_at}}
+                            @empty
+                            {{$offer->updated_at}}    
+                            @endforelse
+                        </td>
                         <td>
                             <ul>
                                 @forelse ($offer->follows as $follow)
