@@ -13,3 +13,7 @@ Route::put('/offers/{id}', [OfferController::class, 'update'])->name('apiupdate'
 Route::get('/offers/{id}', [OfferController::class, 'show'])->name('apishow');
 
 Route::post('/offers/{offerId}/follows',[FollowController::class, 'store'])->name('apistoreFollow');
+Route::get('/offers/{offerId}/follows', [FollowController::class, 'index'])->name('apiindexNews');
+Route::get('/offers/{offerId}/follows/{followID}', [FollowController::class, 'show'])->name('apishowNews');
+Route::put('/offers/{offerId}/follows/{followID}', [FollowController::class, 'update'])->name('apiupdateNews');
+Route::delete('/offers/{offerId}/follows/{followId}', [FollowController::class, 'destroy'])->name('apidestroyNews');
