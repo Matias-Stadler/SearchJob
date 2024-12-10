@@ -108,20 +108,25 @@ You'll see an url that is going to take you to a website.
 
 <p align="center">My endpoints</p>
 
+(post new follow)
 ```
-api/offers/{id}/follows  (post new follow)
+api/offers/{id}/follows
 ```
+(view all de offers)
 ```
-api/offers  (view all de offers)
+api/offers
 ```
+(post new offer)
 ```
-api/offers  (post new offer)
+api/offers
 ```
+(edit a current offer)
 ```
-api/offers/{id}  (edit a current offer)
+api/offers/{id}
 ```
+(delete a current offer)
 ```
-api/offers/{id}  (delete a current offer)
+api/offers/{id}  
 ```
 ***
 
