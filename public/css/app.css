@@ -2,6 +2,7 @@ main
 {
     background-color: black;
 }
+
 header
 {
     background-color: rgb(137, 198, 62);
@@ -22,7 +23,7 @@ h1
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
-    overflow: auto;
+    overflow: scroll;
 }
 
 .githubSection
