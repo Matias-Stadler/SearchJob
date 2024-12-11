@@ -62,10 +62,10 @@ class FollowController extends Controller
     public function update(Request $request, string $offerId, string $newsId)
     {
         //
-        $follow = Offer::find($offerId)->follow[(int)$newsId - 1];
+        $follow = Offer::find($offerId)->follows[(int)$newsId - 1];
 
         $follow->update([
-            'offers_id' => $request-> offers_id,
+            'offer_id' => $request->offer_id,
             'news' => $request->news,
         ]);
         return response()->json($follow, 200);
