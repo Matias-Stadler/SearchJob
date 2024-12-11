@@ -33,9 +33,9 @@
                         <td>{{ $offer->created_at}}</td>
                         <td>
                             @forelse ($offer->follows as $follow)
-                            {{$follow->updated_at}}
+                            <li>{{$follow->updated_at}}</li>
                             @empty
-                            {{$offer->updated_at}}    
+                            {{$offer->updated_at}}
                             @endforelse
                         </td>
                         <td>
